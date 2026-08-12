@@ -9,12 +9,16 @@ description = "A source-grounded retrieval and LLM portfolio project for an auto
 requires-python = ">=3.11"
 dependencies = [
   "boto3>=1.40,<2",
+  "fastapi>=0.115,<1",
+  "mangum==0.20.0",
   "scikit-learn>=1.4,<2",
 ]
 
 [project.optional-dependencies]
 dev = [
+  "httpx2",
   "pytest>=8",
+  "uvicorn[standard]>=0.30,<1",
 ]
 
 [project.scripts]
